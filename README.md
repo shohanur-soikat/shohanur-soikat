@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @shohanur-soikat.
 - 👀 I’m interested in Coding, Development, Cyber Security, Leanring new Programming Languages.
-- 🌱 I’m currently learning C.
+- 🌱 I’m currently learning C Programming Language.
 - 💞️ I’m looking to collaborate on open-source C projects, competitive programming, and embedded systems development.
 - 📫 How to reach me: shohanursoikat@outlook.com
 - 💻 Student: Dpt. of CSE.
