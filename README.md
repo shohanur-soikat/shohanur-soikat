@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning C Programming Language.
 - 💞️ I’m looking to collaborate on open-source C projects, competitive programming, and embedded systems development.
 - 📫 How to reach me: shohanursoikat@outlook.com
-- 💻 Education: Computer Science and Engineering
+- 💻 Education: Computer Science and Engineering, Eastern University.
 
 <!---
 shohanur-soikat/shohanur-soikat is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
