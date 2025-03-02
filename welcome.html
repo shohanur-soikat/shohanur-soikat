@@ -120,25 +120,28 @@
         .relations { color: #ff6666; }
         .skills { color: #66ff66; }
         .interests { color: #dcccff; }
-
+        
         .raw-code-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            color: #00ff00;
-            font-family: "Courier New", Courier, monospace;
-            font-size: 18px;
-            line-height: 1.5;
-            padding: 20px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            z-index: -1;
-            opacity: 8;
-            pointer-events: none;
-        }
-
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    right: auto; /* Prevent stretching */
+    bottom: auto; /* Prevent stretching */
+    width: 40%; /* Adjust width as needed */
+    height: auto;
+    color: #00ff00;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    z-index: 100; /* Make sure it's on top */
+    opacity: 9; /* Ensure visibility */
+    pointer-events: none;
+    overflow: hidden;
+}
+ 
         #skip-btn {
             position: fixed;
             bottom: 10px;
