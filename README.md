@@ -3,8 +3,7 @@
 - 🌱 I’m currently learning C.
 - 💞️ I’m looking to collaborate on open-source C projects, competitive programming, and embedded systems development.
 - 📫 How to reach me shohanoursam@gmail.com
-- 😄 Pronouns: He
-- ⚡ Fun fact: 💻 Dpt. of CSE
+- 💻 Student: Dpt. of CSE
 
 <!---
 shohanur-soikat/shohanur-soikat is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
