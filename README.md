@@ -15,4 +15,4 @@ You can click the Preview link to take a look at your changes.
 
 [![Welcome Animation](https://raw.githubusercontent.com/shohanur-soikat/Shohanur/main/welcome-animation.gif)](https://shohanur-soikat.github.io/Shohanur/)  
 
-🔗 **Live Demo:** [Click Here](https://shohanur-soikat.github.io/Shohanur/)
+🔗 **Live Demo:** [Click Here](https://shohanur-soikat.github.io/Shohanur/welcome.html)
