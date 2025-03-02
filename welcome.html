@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Shohanur Rahman Soikat</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.27.0/themes/prism-okaidia.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: blue;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .profile h1 {
+            color: #2196F3;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            animation: fadeIn 2s;
+        }
+
+        .profile h2, .profile h3, .profile p {
+            color: #66ccff;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .logos {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logos img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .microsoft-logo {
+            width: 60px;  
+            height: 60px;
+            border-radius: 0;
+        }
+
+        .profile-pic {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .code-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            position: fixed;
+            bottom: 10%;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .code-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+            font-family: "Courier New", Courier, monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 20px;
+        }
+
+        .personal-info { color: #2196F3; }
+        .relations { color: #ff6666; }
+        .skills { color: #66ff66; }
+        .interests { color: #dcccff; }
+
+        .raw-code-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #00ff00;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 18px;
+            line-height: 1.5;
+            padding: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            z-index: -1;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        #skip-btn {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        #skip-btn:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Music Toggle Button -->
+    <button id="musicToggle">
+        <img src="assets/play-button.png" alt="Music Toggle" width="50">
+    </button>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="assets/your-music-file.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Animation Content -->
+    <div id="animation">
+        <!-- Add your animation content here -->
+        <img src="assets/skip-button.png" id="skip-btn" alt="Skip" onclick="skipAnimation()">
+    </div>
+
+    <div class="profile">
+        <img src="assets/your-profile-pic.png" alt="Shohanur Rahman Soikat">
+        <h1>Shohanur Rahman Soikat</h1>
+        <h2>CEO, Edge-Tech24</h2>
+        <h3>Computer Science & Engineering (Student)</h3>
+        <p>Eastern University, Dhaka, Bangladesh</p>
+
+        <div class="logos">
+            <img src="assets/google-logo.png" alt="Google">
+            <img src="assets/chrome-logo.png" alt="Chrome">
+            <img src="assets/microsoft-logo.png" alt="Microsoft" class="microsoft-logo">
+            <img src="assets/edge-logo.png" alt="Microsoft Edge">
+            <img src="assets/vscode-logo.png" alt="VSCode">
+            <img src="assets/terminal-logo.png" alt="Terminal">
+            <img src="assets/github-logo.png" alt="GitHub">
+            <img src="assets/datacamp-logo.png" alt="Datacamp">
+            <img src="assets/stackoverflow-logo.png" alt="Stack Overflow">
+            <img src="assets/google-classroom-logo.png" alt="Google Classroom">
+            <img src="assets/Gmail-profile.png" alt="Gmail Profile" class="profile-pic">
+            <img src="assets/Microsoft-profile.png" alt="Microsoft Profile" class="profile-pic">
+        </div>
+    </div>
+
+    <!-- Code Typing Section -->
+    <div class="code-container">
+        <div class="code-box personal-info" id="personal-info"></div>
+        <div class="code-box relations" id="relations"></div>
+        <div class="code-box skills" id="skills"></div>
+        <div class="code-box interests" id="interests"></div>
+    </div>
+
+    <!-- Raw Code Background Section -->
+    <div class="raw-code-background" id="raw-code-background"></div>
+
+    <script>
+        function skipAnimation() {
+            document.getElementById("animation").style.display = "none";
+        }
+
+        const texts = {
+            "personal-info": `const name = "Shohanur Rahman Soikat";
+const age = 21;
+const location = "Dhaka, Bangladesh";`,
+            "relations": `const university = "Eastern University";
+const company = "Edge-Tech24";
+const title = "CEO";`,
+            "skills": `const skills = ["C", "C++", "JavaScript", "Python", "HTML/CSS"];
+function showSkills() {
+    return skills.join(", ");
+}`,
+            "interests": `const interests = ["Football", "Coding", "Technology", "Gaming"];
+function favoriteInterest() {
+    return interests[0];
+}`
+        };
+
+        function typeCode(id, text, speed) {
+            let index = 0;
+            const element = document.getElementById(id);
+            element.textContent = "";
+
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                } else {
+                    setTimeout(() => typeCode(id, text, speed), 500);
+                }
+            }
+            type();
+        }
+
+        const totalTime = 5000;
+        Object.keys(texts).forEach((id) => {
+            const speed = totalTime / texts[id].length;
+            typeCode(id, texts[id], speed);
+        });
+
+        document.getElementById("musicToggle").addEventListener("click", () => {
+            const audio = document.getElementById("bg-music");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+        const rawCode = `
+const texts = {
+    "personal-info": \`const name = "Shohanur Rahman Soikat";\`,
+    "relations": \`const university = "Eastern University";\`,
+    "skills": \`const skills = ["C", "C++", "JavaScript", "Python", "HTML/CSS"];\`,
+    "interests": \`const interests = ["Football", "Coding", "Technology", "Gaming"];\`
+};
+
+function typeCode(id, text, speed) {
+    let index = 0;
+    const element = document.getElementById(id);
+    element.textContent = "";
+    
+    function type() {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}`;
+
+        function typeRawCode() {
+            let index = 0;
+            const element = document.getElementById("raw-code-background");
+            element.textContent = "";
+
+            function type() {
+                if (index < rawCode.length) {
+                    element.textContent += rawCode.charAt(index);
+                    index++;
+                    setTimeout(type, totalTime / rawCode.length);
+                } else {
+                    setTimeout(typeRawCode, 1000);
+                }
+            }
+            type();
+        }
+
+        window.onload = typeRawCode;
+    </script>
+</body>
+</html>
