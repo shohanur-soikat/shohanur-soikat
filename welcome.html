@@ -120,14 +120,15 @@
         .relations { color: #ff6666; }
         .skills { color: #66ff66; }
         .interests { color: #dcccff; }
+        }
         
-        .raw-code-background {
+               .raw-code-background {
     position: absolute;
     top: 50px;
     left: 20px;
-    right: auto; /* Prevent stretching */
-    bottom: auto; /* Prevent stretching */
-    width: 40%; /* Adjust width as needed */
+    right: auto;
+    bottom: auto;
+    width: 40%;
     height: auto;
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
@@ -136,11 +137,13 @@
     padding: 20px;
     white-space: pre-wrap;
     word-wrap: break-word;
-    z-index: 100; /* Make sure it's on top */
-    opacity: 9; /* Ensure visibility */
+    z-index: 100;
+    opacity: 1;
     pointer-events: none;
-    overflow: hidden;
+    overflow-y: auto;
+    max-height: 100vh;               
 }
+
  
         #skip-btn {
             position: fixed;
@@ -289,25 +292,28 @@ function typeCode(id, text, speed) {
     }
     type();
 }`;
-
         function typeRawCode() {
-            let index = 0;
-            const element = document.getElementById("raw-code-background");
-            element.textContent = "";
+    let index = 0;
+    const element = document.getElementById("raw-code-background");
+    element.textContent = ""; // Clear previous text
 
-            function type() {
-                if (index < rawCode.length) {
-                    element.textContent += rawCode.charAt(index);
-                    index++;
-                    setTimeout(type, totalTime / rawCode.length);
-                } else {
-                    setTimeout(typeRawCode, 1000);
-                }
-            }
-            type();
+    function type() {
+        if (index < rawCode.length) {
+            element.textContent += rawCode.charAt(index);
+            index++;
+            setTimeout(type, 20); // Faster typing
+        } else {
+            setTimeout(() => {
+                element.textContent = ""; // Clear and restart
+                typeRawCode();
+            }, 2000); // Pause before restarting
         }
+    }
+    type();
+}
 
-        window.onload = typeRawCode;
+window.onload = typeRawCode;
+
     </script>
 </body>
 </html>
