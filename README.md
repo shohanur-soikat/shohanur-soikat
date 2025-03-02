@@ -13,6 +13,6 @@ You can click the Preview link to take a look at your changes.
 ## 🚀 Welcome Animation  
 🎬 **Check out my animated introduction:**  
 
-[![Welcome Animation](https://raw.githubusercontent.com/shohanur-soikat/Shohanur/main/welcome-animation.gif)](https://shohanur-soikat.github.io/Shohanur/)  
+[![Welcome Animation](https://raw.githubusercontent.com/shohanur-soikat/shohanur-soikat/main/welcome-animation.gif)](https://shohanur-soikat.github.io/shohanur-soikat/)  
 
 🔗 **Live Demo:** [Click Here](https://shohanur-soikat.github.io/shohanur-soikat/welcome.html)
